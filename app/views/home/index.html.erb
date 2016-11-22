@@ -1,0 +1,12 @@
+<h1>BGHS Events Calendar</h1>
+<p>Find out all the deets on what's coming up at BGHS!</p>
+<hr>
+<%= link_to 'List an event', new_event_path, class: 'btn btn-success btn-lg' %>
+
+<div class="row">
+    <div class="col-md-8">
+        <%= render @upcoming_events %>
+    </div>
+</div>
+
+

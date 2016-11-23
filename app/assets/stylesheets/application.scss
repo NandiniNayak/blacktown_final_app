@@ -1,1 +1,23 @@
-@import 'bootstrap'
+@import 'bootstrap';
+h1{
+    text-align: center;
+    color: purple;
+}
+.year_group{
+    background-color: #943535;
+    font-family: 'Poiret one';
+    text-align: center;
+    font-size: 16px;
+    padding: 25px;
+    margin: 5mm;
+    margin-left: 10%;
+    float: left;
+    border: 1px groove purple;
+    border-radius: 5%;
+    color: white;
+    width: 70%;
+    text-decoration: underline;
+    box-shadow: 0px 8px 16px 0 rgb(0,0,0.2);
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}

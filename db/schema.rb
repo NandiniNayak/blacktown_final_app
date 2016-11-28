@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161122221910) do
+ActiveRecord::Schema.define(version: 20161123023916) do
 
   create_table "departments", force: :cascade do |t|
     t.string   "name"
@@ -55,6 +55,20 @@ ActiveRecord::Schema.define(version: 20161122221910) do
 
   add_index "events", ["user_id"], name: "index_events_on_user_id"
 
+  create_table "exams", force: :cascade do |t|
+    t.string   "sub_name"
+    t.string   "grade"
+    t.string   "start_date"
+    t.string   "start_time"
+    t.string   "image"
+    t.text     "description"
+    t.integer  "year_group_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  add_index "exams", ["year_group_id"], name: "index_exams_on_year_group_id"
+
   create_table "subjects", force: :cascade do |t|
     t.string   "name"
     t.string   "faculty"
@@ -62,6 +76,15 @@ ActiveRecord::Schema.define(version: 20161122221910) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  create_table "subs", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "year_group_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  add_index "subs", ["year_group_id"], name: "index_subs_on_year_group_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false

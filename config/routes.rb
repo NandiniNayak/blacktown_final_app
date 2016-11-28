@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :exams
+  resources :subs
   resources :subjects
   resources :departments
   resources :year_groups
